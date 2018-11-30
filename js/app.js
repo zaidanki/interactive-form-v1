@@ -184,7 +184,7 @@ spanAppend('#cvv', 'cvvSpan')
 $('cvvSpan').hide()
 
 $('#cvv').parent().on('input', function() {
-    if (!/^\d{5}$/.test($('#cvv').val())) {
+    if (!/^\d{3}$/.test($('#cvv').val())) {
         $('#cvvSpan').show()
     } else {
         $('#cvvSpan').hide()
