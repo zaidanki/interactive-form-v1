@@ -3,7 +3,7 @@ let colors = document.getElementById('color')
 let price = 0;
 
 const $jobRole = $('#title');
-$jobRole.parent().append('<label id="newlabel">Other Job Role:<label><br><input id="newid" type="text">') // appending the textbox for other job types and hiding it
+// the textbox for other job types and hiding it
 $('#newid').hide()
 $('#newlabel').hide()
 
