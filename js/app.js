@@ -137,59 +137,60 @@ function spanAppend(element, id) { // this is for the error if information is mi
     $(element).prev().append('<div class="tooltip" style="color:red;" id=' + id + '> Make sure you put correct Information </div>')
 }
 spanAppend('#name', 'nameSpan')
-$('nameSpan').hide()
 
-$('#name').parent().on('input', function() { // this function is going to be repeated ( only because i was only required to do one, but i decided to do all of them) it is to make sure that tooltip occurs when needed
+
+$('#name').on('keyup', function() { // this function is going to be repeated ( only because i was only required to do one, but i decided to do all of them) it is to make sure that tooltip occurs when needed
     if (!/^[a-zA-Z]+/.test($('#name').val()) || $('#name').val() === "") {
         $('#nameSpan').show()
     } else {
         $('#nameSpan').hide()
     }
 })
+$('#nameSpan').hide()
 
 spanAppend('#mail', 'mailSpan')
-$('mailSpan').hide()
 
-$('#mail').parent().on('input', function() {
+$('#mail').on('keyup', function() {
     if (!/[\w-]+@([\w-]+\.)+[\w-]+/.test($('#mail').val())) {
         $('#mailSpan').show()
     } else {
         $('#mailSpan').hide()
     }
 })
+$('#mailSpan').hide()
 
 spanAppend('#cc-num', 'ccSpan')
-$('ccSpan').hide()
 
-$('#cc-num').parent().on('input', function() {
+$('#cc-num').parent().on('keyup', function() {
     if (!/^\d{13,16}$/.test($('#cc-num').val())) {
         $('#ccSpan').show()
     } else {
         $('#ccSpan').hide()
     }
 })
+$('#ccSpan').hide()
 
 spanAppend('#zip', 'zipSpan')
-$('zipSpan').hide()
 
-$('#zip').parent().on('input', function() {
+$('#zip').parent().on('keyup', function() {
     if (!/^\d{5}$/.test($('#zip').val())) {
         $('#zipSpan').show()
     } else {
         $('#zipSpan').hide()
     }
 })
+$('#zipSpan').hide()
 
 spanAppend('#cvv', 'cvvSpan')
-$('cvvSpan').hide()
 
-$('#cvv').parent().on('input', function() {
+$('#cvv').parent().on('keyup', function() {
     if (!/^\d{3}$/.test($('#cvv').val())) {
         $('#cvvSpan').show()
     } else {
         $('#cvvSpan').hide()
     }
 })
+$('#cvvSpan').hide()
 
 $('button').click(function(e) { // and last function to make sure that everything is entered correctly, if not register button will do nothing except for pop up an alert!
 
